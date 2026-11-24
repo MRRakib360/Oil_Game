@@ -319,9 +319,10 @@ function spawn(){
     return;
   }
   let r=24,hp=26+l*6+s*6,spd=(1.55+Math.random()*1.1)*(1+(s-1)*0.15);
+  let ny=Math.random()*(c.height-150)+100;
   let nm=names[Math.floor(Math.random()*names.length)];
-  E.push({x:c.width+r,y:Math.random()*(c.height-150)+100,r,hp,mhp:hp,spd,boss:false,lbl:nm});
-  talk("spawn"+nm,c.width+r,y,quotes[Math.floor(Math.random()*quotes.length)],"#06d6a0",1.4,1.05,6000);
+  E.push({x:c.width+r,y:ny,r,hp,mhp:hp,spd,boss:false,lbl:nm});
+  talk("spawn"+nm,c.width+r,ny,quotes[Math.floor(Math.random()*quotes.length)],"#06d6a0",1.4,1.05,6000);
 }
 
 function over(win){
